@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventsphere | Register</title>
+
+        <!-- Favicon links for different devices and browsers -->
+        <link rel="android-chrome" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
+        <link rel="android-chrome" sizes="192x192" href="favicon_io/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+        <!-- Google Fonts: Poppins for a clean and modern look -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Link to external CSS stylesheet for styling the page -->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <!-- Registration Form Section -->
+        <section class="form-container">
+            <form action="register.html" id="registerForm" method="post" enctype="multipart/form-data">
+                
+                <!-- Display the Eventsphere logo -->
+                <img src="img/default-avatar.jpg" alt="Eventsphere Logo" width="250" height="250">
+                
+                <!-- Page titles -->
+                <h1>Welcome to Eventsphere!</h1>
+                <br>
+                <h2>Register</h2>
+
+                <!-- Placeholder for error or success messages -->
+                <div id="messageBox"></div>
+                
+                <!-- Input fields for user registration -->
+                <input type="text" id="username" class="box" placeholder="Enter Username" name="username" required>
+                <input type="email" id="email" class="box" placeholder="Enter Email" name="email" required>
+                <input type="password" id="password" class="box" placeholder="Enter Password" name="password" required>
+                <input type="password" id="cpassword" class="box" placeholder="Confirm Password" name="cpassword" required>
+                
+                <!-- File input for profile picture upload -->
+                <label for="image">Choose Profile Picture</label>
+                <input type="file" id="image" class="box" accept="image/jpg, image/jpeg, image/png" name="image" required>
+                
+                <!-- Submit button to register the user -->
+                <input type="submit" name="submit" value="REGISTER" class="btn">
+                
+                <!-- Login link for existing users -->
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </section>
+
+        <!-- External JavaScript file for form validation and other interactions -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

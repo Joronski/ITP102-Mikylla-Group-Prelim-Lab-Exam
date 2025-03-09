@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventsphere | Update Profile</title>
+
+        <!-- Favicon Links -->
+        <link rel="android-chrome" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
+        <link rel="android-chrome" sizes="192x192" href="favicon_io/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Custom CSS File Link -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Profile Update Section -->
+        <section class="update-profile">
+            <form action="update_profile.html" method="post" enctype="multipart/form-data">
+                <h1>Update Profile</h1>
+
+                <!-- Display Profile Picture -->
+                <img src="uploaded_img/UC (PnC) Logo.png" alt="Profile Picture">
+
+                <!-- Message Box for Notifications -->
+                <div id="messageBox"></div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <!-- Username Input Field -->
+                        <label for="username">Username: </label>
+                        <input type="text" id="username" name="update_username" value="Enter Username" class="box">
+
+                        <!-- Email Input Field -->
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="update_email" value="Enter Email" class="box">
+
+                        <!-- Profile Picture Upload Field -->
+                        <label for="update_pic">Update your profile picture: </label>
+                        <input type="file" id="update_pic" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
+                    </div>
+
+                    <div class="inputBox">
+                        <!-- Hidden Input for Old Password -->
+                        # Fetches old password from database
+                        <input type="hidden" name="old_password" value="<?php echo $fetch['password']; ?>">
+
+                        <!-- Old Password Input Field -->
+                        <label for="prev_password">Old Password: </label>
+                        <input type="password" id="prev_password" name="update_password" placeholder="Enter Previous Password" class="box" minlength="8">
+
+                        <!-- New Password Input Field -->
+                        <label for="new_password">New Password: </label>
+                        <input type="password" id="new_password" name="new_password" placeholder="Enter New Password" class="box" minlength="8">
+
+                        <!-- Confirm New Password Input Field -->
+                        <label for="confirm_password">Confirm Password: </label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm New Password" class="box" minlength="8">
+                    </div>
+                </div>
+
+                <!-- Submit and Back Buttons -->
+                <input type="submit" value="UPDATE PROFILE" name="update_profile" class="btn">
+                <a href="home.html" class="delete-btn-up">BACK</a>
+            </form>
+        </section>
+
+        <!-- Custom JavaScript External File -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventsphere | Login</title>
+
+        <!-- Favicon Links -->
+        <link rel="android-chrome" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
+        <link rel="android-chrome" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- Login Form Section -->
+        <section class="form-container">
+            <form action="" id="loginForm" method="post" enctype="multipart/form-data">
+                <!-- Logo -->
+                <img src="img/default-avatar.jpg" alt="Eventsphere Logo" width="250" height="250">
+                
+                <!-- Welcome Message -->
+                <h1>Welcome Back to Eventsphere!</h1>
+                <br>
+                <h2>Login</h2>
+                
+                <!-- Message Box for Errors or Notifications -->
+                <div id="messageBox"></div>
+                
+                <!-- Email Input -->
+                <input type="email" id="email" class="box" placeholder="Enter Email" name="email" required>
+                
+                <!-- Password Input -->
+                <input type="password" id="password" class="box" placeholder="Enter Password" name="password" required>
+                
+                <!-- Google reCAPTCHA -->
+                <div class="recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6Lcmzd0qAAAAABKw7t8tNTstpWsElSmRgsnU2EIL" data-action="LOGIN"></div>
+                </div>
+                
+                <!-- Login Button -->
+                <input type="submit" id="login" name="submit" value="LOG IN" class="btn">
+                
+                <!-- Links for Password Recovery and Registration -->
+                <p><a href="forgot_password.html">Forgot Password?</a></p>
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </form>
+        </section>
+
+        <!-- Custom JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
